@@ -32,7 +32,7 @@ airealty-onboarding/
 │   ├── models/
 │   │   └── Customer.js
 │   ├── routes/
-│   │   └── customer.js
+│   │   └── Customer-routes.js
 │   ├── utils/
 │   │   └── sendEmail.js
 │   ├── .env
@@ -45,7 +45,7 @@ airealty-onboarding/
 │   │   ├── App.js
 │   │   └── index.js
 │   ├── public/
-│   └── .env
+│   
 ```
 
 ---
