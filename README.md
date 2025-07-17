@@ -55,8 +55,8 @@ airealty-onboarding/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/airealty-onboarding.git
-cd airealty-onboarding
+git clone https://github.com/srinix18/internship-m3i
+cd internship-m3i
 ```
 
 ---
@@ -68,7 +68,7 @@ cd backend
 npm install
 ```
 
-Create a `.env` file based on `.env.sample`:
+Create or edit the `.env` file based on `.env.sample`:
 
 ```env
 MONGODB_URI=your-mongodb-uri
@@ -82,7 +82,7 @@ EMAIL_PASS=your-app-password
 Then start the server:
 
 ```bash
-npm start
+node start server.js
 ```
 
 ---
