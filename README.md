@@ -123,19 +123,14 @@ npm start
 
 | Feature              | Description                                          |
 |----------------------|------------------------------------------------------|
-| Dual-range slider    | Intuitive budget input control                       |
 | Confirmation email   | Sent to customer on successful registration          |
 | Thank You page       | After submission, user is redirected                 |
 | Backend validation   | Secure and robust server-side validation             |
-| Branding             | Styled to match [airealty.space](https://airealty.space) |
+|UI design             | Styled to match [airealty.space](https://airealty.space) |
 
 ---
 
-## 📷 Screenshots
 
-See `/frontend/src/assets/` or design preview links for UI references.
-
----
 
 ## 🚀 Deployment
 
@@ -165,6 +160,6 @@ MIT License
 
 ## 🙋 Contact
 
-For support, reach out to your project supervisor or the AIRealty IT team.
 
-> Project developed by **[Your Name]**, [Year] for the AIRealty Internship Assignment.
+
+> Project developed by **Srinivas**, 2025 for the M3I.
