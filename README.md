@@ -1,32 +1,32 @@
-AIRealty Customer Onboarding Module
-Overview
-This repository contains a full-stack Customer Onboarding Module for AIRealty, allowing users to register their interest in real estate services seamlessly and securely. The solution is built with:
+# 🏠 AIRealty Customer Onboarding Module
 
-Frontend: React (with Material UI)
+## 📋 Overview
 
-Backend: Node.js + Express
+This repository contains a full-stack **Customer Onboarding Module** for **AIRealty**, enabling users to seamlessly register interest in real estate services. The system is secure, responsive, and aesthetically aligned with AIRealty’s branding.
 
-Database: MongoDB
+**Tech Stack:**
+- **Frontend:** React + Material UI
+- **Backend:** Node.js + Express
+- **Database:** MongoDB
+- **Optional:** Nodemailer for email confirmation
 
-Optional Features: Email confirmation for customers
+---
 
-Features
-Responsive, branded onboarding form
+## ✨ Features
 
-Dual-thumb budget range slider
+- Responsive, branded onboarding form
+- Dual-thumb budget range slider
+- Form validation (Indian mobile number, email format, budget range)
+- Backend validation and MongoDB storage
+- Confirmation email sent to each registrant
+- Dedicated "Thank You" page after submission
+- Clean UI following AIRealty design standards
 
-Comprehensive validation (including Indian mobile number & email regex)
+---
 
-Backend stores submissions in MongoDB
+## 🗂 Project Structure
 
-Confirmation email sent to every user (via Nodemailer)
-
-Clean, aesthetically pleasing UI matching AIRealty's design standards
-
-Dedicated Thank You page after form submission
-
-Project Structure
-text
+```
 airealty-onboarding/
 ├── backend/
 │   ├── models/
@@ -45,86 +45,126 @@ airealty-onboarding/
 │   │   ├── App.js
 │   │   └── index.js
 │   ├── public/
-│   │   └── (video background or assets if needed)
-│   └── .env (for React if desired)
-Getting Started
-1. Clone the Repository
-text
+│   └── .env
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/yourusername/airealty-onboarding.git
 cd airealty-onboarding
-2. Backend Setup
-Enter the backend folder:
+```
 
-text
+---
+
+### 2. Backend Setup
+
+```bash
 cd backend
 npm install
-Copy .env.sample to .env and update values:
+```
 
-text
-MONGODB_URI=your-mongodb-connection-string
-PORT=5000
+Create a `.env` file based on `.env.sample`:
 
-SLIDER_MIN_BUDGET=100000
-SLIDER_MAX_BUDGET=10000000
-
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
-Start backend server:
-
-text
-npm start
-3. Frontend Setup
-Open a new terminal, go to the frontend folder:
-
-text
-cd frontend
-npm install
-(Optional) Update frontend/.env for API URLs if needed.
-
-Start the React dev server:
-
-text
-npm start
-API Endpoints
-Method	Endpoint	Description
-POST	/api/customers	Submit new customer lead
-GET	/api/config	Get current slider min/max for budget input
-Validation Rules
-All fields are compulsory
-
-Mobile: Valid 10-digit Indian number (^[6-9]\d{9}$)
-
-Email: Standard email format
-
-Budget: Range must be within configured min & max values, and min ≤ max
-
-Features & Enhancements
-Feature	Description
-Dual-range slider	Intuitive budget selection
-Confirmation email	Automatic email upon successful registration
-Thank You page	User redirected after successful form submission
-Backend validation	Strict, secure, robust
-Matching branding	UI matches airealty.space’s style
-Sample .env (Backend)
-text
+```env
 MONGODB_URI=your-mongodb-uri
 PORT=5000
 SLIDER_MIN_BUDGET=100000
 SLIDER_MAX_BUDGET=10000000
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-app-password
-Screenshots
-See /frontend/src/assets/ or design preview for UI reference.
+```
 
-Deployment
-Deploy backend to any Node.js-compatible provider (e.g., Heroku, Render, Railway).
+Then start the server:
 
-Deploy frontend (build with npm run build) to Netlify, Vercel, or your preferred platform.
+```bash
+npm start
+```
 
-License
+---
+
+### 3. Frontend Setup
+
+Open a new terminal:
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+> Optionally, add `.env` for frontend-specific environment variables like API URL.
+
+---
+
+## 🛠 API Endpoints
+
+| Method | Endpoint            | Description                        |
+|--------|---------------------|------------------------------------|
+| POST   | `/api/customers`    | Submit new customer lead           |
+| GET    | `/api/config`       | Get slider min/max budget values   |
+
+---
+
+## ✅ Validation Rules
+
+- **All fields are required**
+- **Mobile**: Must match `^[6-9]\d{9}$` (valid Indian number)
+- **Email**: Standard email format
+- **Budget**: Must be within configured range (`SLIDER_MIN_BUDGET` to `SLIDER_MAX_BUDGET`) and `min ≤ max`
+
+---
+
+## 💡 Features & Enhancements
+
+| Feature              | Description                                          |
+|----------------------|------------------------------------------------------|
+| Dual-range slider    | Intuitive budget input control                       |
+| Confirmation email   | Sent to customer on successful registration          |
+| Thank You page       | After submission, user is redirected                 |
+| Backend validation   | Secure and robust server-side validation             |
+| Branding             | Styled to match [airealty.space](https://airealty.space) |
+
+---
+
+## 📷 Screenshots
+
+See `/frontend/src/assets/` or design preview links for UI references.
+
+---
+
+## 🚀 Deployment
+
+- **Backend:** Deploy to Render, Railway, Heroku, or other Node.js-compatible hosts.
+- **Frontend:** Use Netlify, Vercel, or GitHub Pages (`npm run build` → upload).
+
+---
+
+## 🔒 Sample `.env` (Backend)
+
+```env
+MONGODB_URI=your-mongodb-uri
+PORT=5000
+SLIDER_MIN_BUDGET=100000
+SLIDER_MAX_BUDGET=10000000
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+```
+
+---
+
+## 📄 License
+
 MIT License
 
-Contact
-For questions or support, reach out to your project supervisor or contact the AIRealty IT team.
+---
 
-Project Developed by [Your Name], [Year] for AIRealty Internship Assignment.
+## 🙋 Contact
+
+For support, reach out to your project supervisor or the AIRealty IT team.
+
+> Project developed by **[Your Name]**, [Year] for the AIRealty Internship Assignment.
