@@ -8,7 +8,7 @@ This repository contains a full-stack **Customer Onboarding Module** for **AIRea
 - **Frontend:** React + Material UI
 - **Backend:** Node.js + Express
 - **Database:** MongoDB
-- **Optional:** Nodemailer for email confirmation
+- **Nodemailer**: for email confirmation
 
 ---
 
