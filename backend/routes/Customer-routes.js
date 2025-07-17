@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Customer = require('../models/Customer');
+const { sendConfirmationEmail } = require('../utils/sendEmail'); // <-- Add this line
 
 const indianMobileRegex = /^[6-9]\d{9}$/;
 const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/;
@@ -44,6 +45,15 @@ router.post('/', async (req, res) => {
     });
 
     await customer.save();
+
+    // --- Send confirmation email
+    try {
+      await sendConfirmationEmail({ to: email, name: fullName });
+    } catch (err) {
+      // Do not block the user for email failure; just log
+      console.error('Confirmation email sending failed:', err);
+    }
+
     res.status(201).json({ message: 'Customer registered successfully.' });
   } catch (error) {
     if (error.name === 'ValidationError') {
