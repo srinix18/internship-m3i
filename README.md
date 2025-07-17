@@ -162,4 +162,4 @@ MIT License
 
 
 
-> Project developed by **Srinivas**, 2025 for the M3I.
+> Project developed by **Srinivas**, 2025 for M3I Solutions.
